@@ -1,11 +1,15 @@
-<h1> Meet <%= @pirate.name %>!</h1>
-<h2>Weight: <%= @pirate.weight %>  Height: Weight: <%= @pirate.height %></h2>
+<h1>Pirate</h1>
+<h1>Name: <%= @pirate.name %></h1>
+<h2>Weight: <%= @pirate.weight %></h2>
+<h2>Height: <%= @pirates.height %></h2>
 
 
-<% @ships.each do |ship|%>
-<div>
-  <h2>Ship Name: <%= ship.name %> </h2>
-  <h3>Type: <%= ship.type %> </h3>
-  <h3>Booty Details: <%= ship.booty %> </h3>
-</div><br>
-<% end%>
+<h2>Ships</h2>
+<% @ships.each do |ship| %>
+  <div class="ship">
+    <h4>Name: <%= ship.name %></h4>
+    <h4>Type: <%= ship.type %></h4>
+    <h4>Booty: <%= ship.booty %></h4>
+  </div>
+  <% end %>
+
